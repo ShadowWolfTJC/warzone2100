@@ -261,9 +261,9 @@ function eventStructureBuilt(struct)
 
 function eventDestroyed(victim)
 {
-	if (victim.player == selectedPlayer && victim.type == STRUCTURE && victim.stattype == HQ)
+	if (victim.player == selectedPlayer && victim.type == STRUCTURE && victim.stattype == HQ && !enumStruct(selectedPlayer,HQ).length)
 	{
-		setMiniMap(false); // hide minimap if HQ is destroyed
+		setMiniMap(false); // hide minimap if HQ is destroyed, and no more HQs are present
 		setDesign(false); // and disallow design
 	}
 }
