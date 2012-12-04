@@ -32,9 +32,9 @@ R-Wpn-Cannon5,Cannon5VulcanMk1,WEAPON,0,0,10
 R-Wpn-Cannon5,Cannon5Vulcan-VTOL,WEAPON,0,0,10
 R-Wpn-Cannon6TwinAslt,Cannon6TwinAslt,WEAPON,0,BODY,10
 R-Comp-CommandTurret01,CommandBrain01,BRAIN,0,0,3
-R-Comp-CommandTurret02,CommandTurret2,WEAPON,0,0,10
-R-Comp-CommandTurret03,CommandTurret3,WEAPON,0,0,10
-R-Comp-CommandTurret04,CommandTurret4,WEAPON,0,0,10
+R-Comp-CommandTurret02,CommandBrain02,BRAIN,0,0,10
+R-Comp-CommandTurret03,CommandBrain03,BRAIN,0,0,10
+R-Comp-CommandTurret04,CommandBrain04,BRAIN,0,0,10
 R-Wpn-Missile2A-T,Cyb-Bod-Atmiss,BODY,CyborgRkt1Ground,BODY,2
 R-Sys-Engineering01,Cyb-Bod-ComEng,BODY,0,0,2
 R-Wpn-Mortar01Lt,Cyb-Bod-Grenade,BODY,0,0,2
