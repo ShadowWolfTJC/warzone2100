@@ -1,2 +1,5 @@
 ZNULLBRAIN,Level All,0,0,0,0,0,ZNULLWEAPON,0
 CommandBrain01,Level All,1,1,1,1,1,CommandTurret1,0
+CommandBrain02,Level All,1,1,1,1,1,CommandTurret2,0
+CommandBrain03,Level All,1,1,1,1,1,CommandTurret3,0
+CommandBrain04,Level All,1,1,1,1,1,CommandTurret4,0
