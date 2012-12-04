@@ -301,6 +301,9 @@ ZNULLBRAIN				"Z NULL BRAIN"
 StandardBrain				"*TEST - Standard Brain*"
 ConstructionBrain			"*TEST - ConstructionBrain*"
 CommandBrain01				_("Command Turret")
+CommandBrain02				_("Command Turret II")
+CommandBrain03				_("Command Turret III")
+CommandBrain04				_("Command Turret IV")
 
 /* PROGRAM */
 ZNULLPROGRAM				"Z NULL PROGRAM"
