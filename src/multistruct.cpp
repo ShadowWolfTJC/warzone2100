@@ -234,6 +234,8 @@ bool recvLasSat(NETQUEUE queue)
 		NETuint8_t(&targetplayer);
 	NETend();
 
+	triggerEventStructureActivated(psStruct, psObj);
+
 	psStruct = IdToStruct (id, player);
 	psObj	 = IdToPointer(targetid, targetplayer);
 	if (psStruct && !canGiveOrdersFor(queue.index, psStruct->player))
