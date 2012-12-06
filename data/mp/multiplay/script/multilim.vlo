@@ -19,5 +19,6 @@ cybfac			STRUCTURESTAT		"A0CyborgFactory"
 repair			STRUCTURESTAT		"A0RepairCentre3"
 vtolfact		STRUCTURESTAT		"A0VTolFactory1"
 vtolpad			STRUCTURESTAT		"A0VtolPad"	
+satuplink  	STRUCTURESTAT		"A0Sat-linkCentre"
 lassat		STRUCTURESTAT		"A0LasSatCommand"
 }
