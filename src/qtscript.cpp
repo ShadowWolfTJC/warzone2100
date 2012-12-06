@@ -755,6 +755,27 @@ bool triggerEventStructureReady(STRUCTURE *psStruct)
 	return true;
 }
 
+//__ \subsection{eventStructureActivated(structure[, target])}
+//__ An event that is run every time a structure performs its special ability.
+//__ The "target" parameter, which may be a droid, structure, or feature,
+//__ is set if the player that used the structure needed to pick a target
+//__ for the structure. The event is called for all players / scripts.
+bool triggerEventStructureActivated(STRUCTURE *psStruct, BASE_OBJECT *psTarget)
+{
+	for (int i = 0; i < scripts.size(); ++i)
+	{
+		QScriptEngine *engine = scripts.at(i);
+		QScriptValueList args;
+		args += convStructure(psStruct, engine);
+		if (psTarget)
+		{
+			args += convMax(psVictim, engine);
+		}
+		callFunction(engine, "eventStructureActivated", args);
+	}
+	return true;
+}
+
 //__ \subsection{eventAttacked(victim, attacker)}
 //__ An event that is run when an object belonging to the script's controlling player is
 //__ attacked. The attacker parameter may be either a structure or a droid.
