@@ -755,15 +755,23 @@ bool intAddOrder(BASE_OBJECT *psObj)
 		OrderButtons[OrdIndex].AcNumButs = NumButs;
 
 		// Handle special case for factory -> command droid assignment buttons.
+		// For now, until we figure out how we're going to show more than 5 factory buttons for commanders to work with,
+		// we'll need to limit which factories can be assigned to them to just 5.
 		switch (OrderButtons[OrdIndex].Class) {
 			case ORDBUTCLASS_FACTORY:
 				NumButs = countAssignableFactories((UBYTE)selectedPlayer,FACTORY_FLAG);
+				if (NumButs > 5)
+					NumButs = 5;
 				break;
 			case ORDBUTCLASS_CYBORGFACTORY:
 				NumButs = countAssignableFactories((UBYTE)selectedPlayer,CYBORG_FLAG);
+				if (NumButs > 5)
+					NumButs = 5;
 				break;
 			case ORDBUTCLASS_VTOLFACTORY:
 				NumButs = countAssignableFactories((UBYTE)selectedPlayer,VTOL_FLAG);
+				if (NumButs > 5)
+					NumButs = 5;
 				break;
 			default:
 				break;
