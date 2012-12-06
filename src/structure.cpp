@@ -3979,7 +3979,7 @@ UDWORD fillStructureList(STRUCTURE_STATS **ppList, UDWORD selectedPlayer, UDWORD
 					}
 				}
 				//paranoid check!!
-				if (psBuilding->type == REF_FACTORY ||
+				/*if (psBuilding->type == REF_FACTORY ||
 					psBuilding->type == REF_CYBORG_FACTORY ||
 					psBuilding->type == REF_VTOL_FACTORY)
 				{
@@ -4001,7 +4001,7 @@ UDWORD fillStructureList(STRUCTURE_STATS **ppList, UDWORD selectedPlayer, UDWORD
 					{
 						continue;
 					}
-				}
+				}*/
 
 				debug(LOG_NEVER, "adding %s (%x)", psBuilding->pName, apStructTypeLists[selectedPlayer][inc]);
 				ppList[count++] = psBuilding;
