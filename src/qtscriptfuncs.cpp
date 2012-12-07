@@ -60,6 +60,7 @@
 #include "atmos.h"
 #include "warcam.h"
 #include "projectile.h"
+#include "visibility.h"
 
 #define FAKE_REF_LASSAT 999
 #define ALL_PLAYERS -1
@@ -2241,6 +2242,13 @@ static QScriptValue js_setTutorialMode(QScriptContext *context, QScriptEngine *e
 	return QScriptValue();
 }
 
+//-- \subsection{revealMap(bool)} Enables/disables full visibility of the map.
+static QScriptValue js_revealMap(QScriptContext *context, QScriptEngine *engine)
+{
+	seeEverything = context->argument(0).toBool();
+	return QScriptValue();
+}
+
 //-- \subsection{setMiniMap(bool)} Turns visible minimap on or off in the GUI.
 static QScriptValue js_setMiniMap(QScriptContext *context, QScriptEngine *engine)
 {
@@ -3301,6 +3309,7 @@ bool registerFunctions(QScriptEngine *engine, QString scriptName)
 	engine->globalObject().setProperty("setTutorialMode", engine->newFunction(js_setTutorialMode));
 	engine->globalObject().setProperty("setDesign", engine->newFunction(js_setDesign));
 	engine->globalObject().setProperty("enableTemplate", engine->newFunction(js_enableTemplate));
+	engine->globalObject().setProperty("revealMap", engine->newFunction(js_revealMap));
 	engine->globalObject().setProperty("setMiniMap", engine->newFunction(js_setMiniMap));
 	engine->globalObject().setProperty("addReticuleButton", engine->newFunction(js_addReticuleButton));
 	engine->globalObject().setProperty("removeReticuleButton", engine->newFunction(js_removeReticuleButton));
