@@ -34,6 +34,8 @@ extern void visTilesUpdate(BASE_OBJECT *psObj);
 
 extern void revealAll(UBYTE player);
 
+extern bool seeEverything;
+
 /* Check whether psViewer can see psTarget
  * psViewer should be an object that has some form of sensor,
  * currently droids and structures.
