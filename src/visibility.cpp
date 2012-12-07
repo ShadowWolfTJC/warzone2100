@@ -293,7 +293,7 @@ void visTilesUpdate(BASE_OBJECT *psObj)
 		}
 	}
 
-	// Do the whole circle in ∞ steps. No more pretty moiré patterns.
+	// Do the whole circle in âˆž steps. No more pretty moirÃ© patterns.
 	doWaveTerrain(psObj, recordTilePos, &lastRecordTilePos);
 
 	// Record new map visibility provided by object
@@ -507,11 +507,11 @@ static void processVisibilitySelf(BASE_OBJECT *psObj)
 		setSeenBy(psObj, psObj->player, UBYTE_MAX);
 	}
 
-	// if a player has a SAT_UPLINK structure, or has godMode enabled,
-	// they can see everything!
+	// if a player has seeEverything enabled (which would normally happen if the player has a satellite uplink),
+	// or has godMode enabled (via cheating), they can see everything!
 	for (viewer = 0; viewer < MAX_PLAYERS; viewer++)
 	{
-		if (getSatUplinkExists(viewer) || (viewer == selectedPlayer && godMode))
+		if (viewer == selectedPlayer && (seeEverything || godMode))
 		{
 			setSeenBy(psObj, viewer, UBYTE_MAX);
 		}
